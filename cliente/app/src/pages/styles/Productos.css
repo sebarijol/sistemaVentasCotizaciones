@@ -1,0 +1,18 @@
+.page-container {
+  padding: 2rem;
+}
+
+table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+}
+
+th, td {
+  border-bottom: 1px solid #eee;
+  padding: 0.75rem;
+}
+
+th {
+  background: #f3f4f6;
+}
