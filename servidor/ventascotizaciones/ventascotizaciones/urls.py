@@ -3,6 +3,7 @@ from django.urls import path, include
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from rest_framework import routers
 
+from apps import api_router
 from apps.usuarios.views import UsuarioViewSet
 from apps.clientes.views import ClienteViewSet
 from apps.productos.views import ProductoViewSet
@@ -22,12 +23,8 @@ router.register(r'notificaciones', NotificacionViewSet)
 urlpatterns = [
     path("admin/", admin.site.urls),
 
-    # 🔐 Endpoints JWT
     path("api/auth/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/auth/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
 
-    # Tus endpoints de API
-    path("api/", include("apps.usuarios.urls")),
-    path("api/", include("apps.clientes.urls")),
-    path("api/", include("apps.productos.urls")),
+    path('api/', include(api_router.urlpatterns)),
 ]
