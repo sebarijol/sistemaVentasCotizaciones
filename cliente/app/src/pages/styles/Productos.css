@@ -1,18 +1,103 @@
-.page-container {
-  padding: 2rem;
+/* === Estilos del botón principal === */
+.boton-agregar {
+  background-color: #2b6cb0;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 15px;
 }
 
+.boton-agregar:hover {
+  background-color: #2c5282;
+}
+
+/* === Formulario para nuevo producto === */
+.formulario-producto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background-color: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-producto input,
+.formulario-producto select {
+  flex: 1 1 180px;
+  min-width: 150px;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.formulario-producto input:focus,
+.formulario-producto select:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 4px rgba(49, 130, 206, 0.4);
+}
+
+/* === Botón guardar === */
+.boton-guardar {
+  background-color: #38a169;
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boton-guardar:hover {
+  background-color: #2f855a;
+}
+
+/* === Tabla de productos === */
 table {
   width: 100%;
-  background: white;
   border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
-  border-bottom: 1px solid #eee;
-  padding: 0.75rem;
+  padding: 12px 14px;
+  text-align: left;
 }
 
 th {
-  background: #f3f4f6;
+  background-color: #2b6cb0;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+tr:hover {
+  background-color: #edf2f7;
+}
+
+/* === Contenedor principal === */
+.page-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #2d3748;
 }
