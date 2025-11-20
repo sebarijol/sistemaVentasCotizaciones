@@ -24,7 +24,7 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
         ('vendedor', 'Vendedor'),
     ]
 
-    id = models.AutoField(primary_key=True)
+    id_usuario = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100)
     correo = models.EmailField(unique=True)
     rol = models.CharField(max_length=20, choices=ROLES)
