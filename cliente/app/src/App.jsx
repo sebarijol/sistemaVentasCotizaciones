@@ -7,11 +7,13 @@ import Reportes from "./pages/Reportes";
 import Cotizaciones from "./pages/Cotizaciones";
 import Campañas from "./pages/Campañas";
 import Notificaciones from "./pages/Notificaciones";
+import EnviarCorreo from "./pages/EnviarCorreo";
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/enviar-correo" element={<EnviarCorreo />} />
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/clientes" element={<Clientes />} />

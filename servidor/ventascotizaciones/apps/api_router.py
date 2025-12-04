@@ -1,3 +1,4 @@
+from django.urls import include, path
 from rest_framework import routers
 from apps.usuarios.views import UsuarioViewSet
 from apps.clientes.views import ClienteViewSet
@@ -13,7 +14,9 @@ router.register(r'clientes', ClienteViewSet, basename='clientes')
 router.register(r'productos', ProductoViewSet, basename='productos')
 router.register(r'pymes', PymeViewSet, basename='pyme')
 router.register(r'cotizaciones', CotizacionViewSet, basename='cotizaciones')
-router.register(r'campañas', CampañaViewSet, basename='campañas')  
+router.register(r'campañas', CampañaViewSet, basename='campañas')
 router.register(r'notificaciones', NotificacionViewSet, basename='notificaciones')
 
-urlpatterns = router.urls
+urlpatterns = [
+    path("", include(router.urls)),
+]
