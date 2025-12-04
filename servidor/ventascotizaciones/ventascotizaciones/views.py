@@ -18,7 +18,7 @@ def test_email(request):
     mensaje = data.get("mensaje")
     destinatario = data.get("destinatario")
 
-    if not asunto or not mensaje or y destinatario:
+    if not asunto or not mensaje or not destinatario:
         return JsonResponse({
             "error": "Faltan campos: asunto, mensaje, destinatario"
         }, status=400)
