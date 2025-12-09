@@ -10,7 +10,7 @@ export default function Productos() {
     nombre: "",
     sku: "",
     precio: "",
-    pyme: "", // será el id de la pyme seleccionada
+    pyme: "",
   });
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
@@ -34,8 +34,6 @@ export default function Productos() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validación mínima: sku único en frontend no es posible sin chequear al backend,
-    // dejamos que el backend responda en caso de duplicado.
     const payload = {
       nombre: nuevoProducto.nombre,
       sku: nuevoProducto.sku,
@@ -51,7 +49,6 @@ export default function Productos() {
       })
       .catch((err) => {
         console.error("Error al agregar producto:", err);
-        // Si quieres, mostrar mensaje de error bonito aquí.
       });
   };
 
@@ -131,7 +128,7 @@ export default function Productos() {
                 <td>${p.precio}</td>
                 <td>{p.pyme && (typeof p.pyme === "object" ? p.pyme.nombre : p.pyme)}</td>
               </tr>
-            ))}
+            ))} 
           </tbody>
         </table>
       </div>

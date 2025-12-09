@@ -1,8 +1,6 @@
 import api from "./api";
 import { jwtDecode } from "jwt-decode";
 
-// ...
-
 export const login = async (correo, password) => {
   const res = await api.post("auth/token/", { username: correo, password });
   localStorage.setItem("token", res.data.access);

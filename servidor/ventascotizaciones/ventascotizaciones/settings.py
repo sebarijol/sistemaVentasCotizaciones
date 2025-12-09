@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'apps.productos',
     'apps.cotizaciones',
     'apps.notificaciones',
+    'apps.pyme',
 ]
 
 MIDDLEWARE = [

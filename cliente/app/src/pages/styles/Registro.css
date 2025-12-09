@@ -1,0 +1,96 @@
+.registro-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px #0002;
+}
+
+.titulo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #0284c7;
+}
+
+.error {
+  color: #e11d48;
+  font-size: 0.85rem;
+}
+
+.success {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.botones {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btn.azul {
+  background: #0284c7;
+  color: white;
+}
+
+.telefono-box {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+}
+
+.telefono-box input {
+  border: none;
+  padding: 0.3rem;
+  width: 100%;
+}
+
+.flag {
+  font-size: 1.2rem;
+}
+
+.prefijo {
+  font-weight: bold;
+  color: #374151;
+}

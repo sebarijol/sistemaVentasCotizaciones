@@ -8,13 +8,18 @@ import Cotizaciones from "./pages/Cotizaciones";
 import Campañas from "./pages/Campañas";
 import Notificaciones from "./pages/Notificaciones";
 import EnviarCorreo from "./pages/EnviarCorreo";
-
+import Landing from "./pages/Landing";
+import Registro  from "./pages/Registro";
+import Perfil  from "./pages/Perfil";
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path="/perfil" element={<Perfil />} />
         <Route path="/enviar-correo" element={<EnviarCorreo />} />
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/clientes" element={<Clientes />} />
         <Route path="/productos" element={<Productos />} />
