@@ -1,7 +1,9 @@
-from rest_framework.routers import DefaultRouter
-from .views import PymeRegistroViewSet
+from rest_framework.routers import DefaultRouter, path
+from .views import CurrentPymeView, PymeRegistroViewSet
 
 router = DefaultRouter()
 router.register(r"registrarpyme", PymeRegistroViewSet, basename="registrarpyme")
 
-urlpatterns = router.urls
+urlpatterns = [
+    path("", CurrentPymeView.as_view(), name="current-pyme"),
+]

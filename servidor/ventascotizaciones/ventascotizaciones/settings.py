@@ -156,3 +156,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "empresaejemplo778@gmail.com"
 EMAIL_HOST_PASSWORD = "yggnxcpvrezggfca"
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+DATETIME_FORMAT = "%d/%m/%Y %H:%M"
+DATETIME_INPUT_FORMATS = ["%d/%m/%Y %H:%M"]
+USE_L10N = False

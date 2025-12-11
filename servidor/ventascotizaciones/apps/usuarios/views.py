@@ -16,6 +16,7 @@ class CurrentUserView(APIView):
     def get(self, request):
         usuario = request.user
         return Response({
+            "id_usuario": usuario.id_usuario,
             "nombre": usuario.nombre,
             "correo": usuario.correo,
             "rol": usuario.rol

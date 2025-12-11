@@ -10,7 +10,7 @@ class Pyme(models.Model):
     región = models.CharField(max_length=100)
     comuna = models.CharField(max_length=100)
     telefono = models.CharField(max_length=30)
-    correo = models.EmailField()
+    correo = models.EmailField(unique=True)
 
     iva = models.DecimalField(decimal_places=2, default=0, max_digits=5)
     impuesto_interno = models.DecimalField(decimal_places=2, default=0, max_digits=5)

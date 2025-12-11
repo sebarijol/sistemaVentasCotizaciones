@@ -59,18 +59,16 @@ export default function Navbar() {
 
             {/* Información del usuario */}
             <div className="dropdown-user-info">
-              <a>{user?.nombre}</a>
+              {user?.nombre}
             </div>
 
             <hr className="dropdown-separator" />
 
-            <button className="dropdown-item">Perfil</button>
-            <button className="dropdown-item">Configuración</button>
+            <Link to="/perfil" className="dropdown-item">Perfil</Link>
 
             <button className="dropdown-item logout" onClick={handleLogout}>
               Cerrar sesión
             </button>
-
           </div>
         )}
       </div>

@@ -53,3 +53,15 @@ class PymeRegistroSerializer(serializers.Serializer):
         )
 
         return pyme
+
+class UsuarioSimpleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Usuario
+        fields = ["id_usuario", "nombre", "correo", "rol"]
+
+class PymeSerializer(serializers.ModelSerializer):
+    administrador = UsuarioSimpleSerializer(read_only=True)
+
+    class Meta:
+        model = Pyme
+        fields = "__all__"

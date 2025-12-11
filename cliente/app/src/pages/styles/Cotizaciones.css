@@ -1,18 +1,66 @@
 .page-container {
-  padding: 2rem;
+  padding: 20px;
 }
 
-table {
+.form-cotizacion {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #ddd;
+}
+
+.form-cotizacion input,
+.form-cotizacion select,
+.form-cotizacion textarea {
+  padding: 8px;
+}
+
+.vendedor-asignado {
+  font-size: 14px;
+  color: #444;
+}
+
+.item-cotizacion {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.tabla-cotizaciones {
   width: 100%;
   border-collapse: collapse;
+}
+
+.tabla-cotizaciones th,
+.tabla-cotizaciones td {
+  border: 1px solid #ccc;
+  color: black;
+  padding: 10px;
+}
+
+.acciones button {
+  margin-right: 5px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0006;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
   background: white;
-}
-
-th, td {
-  border-bottom: 1px solid #eee;
-  padding: 0.75rem;
-}
-
-th {
-  background: #f3f4f6;
+  padding: 20px;
+  border-radius: 10px;
+  width: 380px;
 }

@@ -1,8 +1,15 @@
 from rest_framework import serializers
-from .models import Producto
+from rest_framework import serializers
+from .models import Producto, Etiqueta
+
+class EtiquetaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Etiqueta
+        fields = "__all__"
+
     
 class ProductoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Producto
-        fields = ["id_producto", "nombre", "sku", "precio"]
+        fields = "__all__"
